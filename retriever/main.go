@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"imooc.com/joizhang/learn-golang/retriever/mock"
-	"imooc.com/joizhang/learn-golang/retriever/real"
+	"github.com/gaohuag/learn-golang/retriever/mock"
+	"github.com/gaohuag/learn-golang/retriever/real"
 	"time"
 )
 

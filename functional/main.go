@@ -6,7 +6,7 @@ import (
 	"io"
 	"strings"
 
-	"imooc.com/joizhang/learn-golang/functional/fib"
+	"github.com/gaohuag/learn-golang/functional/fib"
 )
 
 type intGen func() int

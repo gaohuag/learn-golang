@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"imooc.com/joizhang/learn-golang/tree"
+	"github.com/gaohuag/learn-golang/tree"
 )
 
 type myTreeNode struct {

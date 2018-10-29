@@ -1,9 +1,9 @@
 package engine
 
 import (
-	"imooc.com/joizhang/learn-golang/crawler/scheduler"
-	"imooc.com/joizhang/learn-golang/crawler/types"
-	"imooc.com/joizhang/learn-golang/crawler/zhenai/parser"
+	"github.com/gaohuag/learn-golang/crawler/scheduler"
+	"github.com/gaohuag/learn-golang/crawler/types"
+	"github.com/gaohuag/learn-golang/crawler/zhenai/parser"
 	"testing"
 )
 

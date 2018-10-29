@@ -1,3 +1,4 @@
+// atomic Increment and Get
 package main
 
 import (
@@ -6,13 +7,15 @@ import (
 	"time"
 )
 
-type atomicInt struct {
+// 定义结构
+type AtomicInt struct {
 	value int
 	lock  sync.Mutex
 }
 
-func (a *atomicInt) increment() {
-	fmt.Println("safe increment")
+// 增加
+func (a *AtomicInt) Increment() {
+	fmt.Println("safe Increment")
 	func() {
 		a.lock.Lock()
 		defer a.lock.Unlock()
@@ -21,7 +24,8 @@ func (a *atomicInt) increment() {
 	}()
 }
 
-func (a *atomicInt) get() int {
+// 获取
+func (a *AtomicInt) Get() int {
 	a.lock.Lock()
 	defer a.lock.Unlock()
 
@@ -29,11 +33,11 @@ func (a *atomicInt) get() int {
 }
 
 func main() {
-	var a atomicInt
-	a.increment()
+	var a AtomicInt
+	a.Increment()
 	go func() {
-		a.increment()
+		a.Increment()
 	}()
 	time.Sleep(time.Millisecond)
-	fmt.Println(a.get())
+	fmt.Println(a.Get())
 }

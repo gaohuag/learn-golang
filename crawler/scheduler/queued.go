@@ -1,7 +1,7 @@
 package scheduler
 
 import (
-	"imooc.com/joizhang/learn-golang/crawler/types"
+	"github.com/gaohuag/learn-golang/crawler/types"
 )
 
 // Request队列和Worker队列

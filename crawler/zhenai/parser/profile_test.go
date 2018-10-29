@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"imooc.com/joizhang/learn-golang/crawler/zhenai/model"
+	"github.com/gaohuag/learn-golang/crawler/zhenai/model"
 	"io/ioutil"
 	"testing"
 )

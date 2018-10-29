@@ -3,7 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"imooc.com/joizhang/learn-golang/pipeline"
+	"github.com/gaohuag/learn-golang/pipeline"
 	"os"
 )
 

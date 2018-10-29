@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"imooc.com/joizhang/learn-golang/crawler/types"
+	"github.com/gaohuag/learn-golang/crawler/types"
 	"regexp"
 )
 

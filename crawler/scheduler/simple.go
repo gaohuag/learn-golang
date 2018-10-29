@@ -1,7 +1,7 @@
 package scheduler
 
 import (
-	"imooc.com/joizhang/learn-golang/crawler/types"
+	"github.com/gaohuag/learn-golang/crawler/types"
 )
 
 // 所有Worker共用一个输入
