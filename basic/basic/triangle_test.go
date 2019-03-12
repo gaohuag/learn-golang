@@ -2,6 +2,7 @@ package main
 
 import "testing"
 
+//表组测试
 func TestTriangle(t *testing.T) {
 	tests := []struct{ a, b, c int }{
 		{3, 4, 5},

@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 )
 
+//switch
 func grade(score int) string {
 	g := ""
 	switch {

@@ -5,12 +5,14 @@ import (
 	"time"
 )
 
+//worker 是从channel中取数据，打印
 func worker(id int, c chan int) {
 	for n := range c {
 		fmt.Printf("Worker %d received %c\n", id, n)
 	}
 }
 
+//创建worker,返回可以放数据的channel
 func createWorker(id int) chan<- int {
 	c := make(chan int)
 	go worker(id, c)
@@ -18,7 +20,9 @@ func createWorker(id int) chan<- int {
 }
 
 func chanDemo() {
+	// 数组 放可以放数据的channel
 	var channels [10]chan<- int
+	//
 	for i := 0; i < 10; i++ {
 		channels[i] = createWorker(i)
 	}
@@ -56,10 +60,10 @@ func channelClose() {
 }
 
 func main() {
-	fmt.Println("Channel as first-class citizen")
-	chanDemo()
-	fmt.Println("Buffered channel")
-	bufferedChannel()
+	//fmt.Println("Channel as first-class citizen")
+	//chanDemo()
+	//fmt.Println("Buffered channel")
+	//bufferedChannel()
 	fmt.Println("Channel close and range")
 	channelClose()
 }

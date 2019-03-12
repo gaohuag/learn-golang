@@ -30,19 +30,21 @@ func createWorker(id int, wg *sync.WaitGroup) worker {
 
 func chanDemo() {
 	var wg sync.WaitGroup
-
+	// 10个worker
 	var workers [10]worker
 	for i := 0; i < 10; i++ {
 		workers[i] = createWorker(i, &wg)
 	}
 
-	wg.Add(20)
 	for i, worker := range workers {
+		wg.Add(1)
 		worker.in <- 'a' + i
 	}
 	for i, worker := range workers {
+		wg.Add(1)
 		worker.in <- 'A' + i
 	}
+	wg.Wait()
 }
 
 func main() {
